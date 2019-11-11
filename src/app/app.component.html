@@ -11,10 +11,14 @@
     <main class="content-area">
       <router-outlet></router-outlet>
     </main>
-    <clr-vertical-nav  [clrVerticalNavCollapsible]="true" class="nav-trigger--bottom" [clr-nav-level]="1">
+    <clr-vertical-nav [clrVerticalNavCollapsible]="true" class="nav-trigger--bottom" [clr-nav-level]="1">
       <a clrVerticalNavLink routerLink="inicio" routerLinkActive="active">
         <clr-icon clrVerticalNavIcon shape="house"></clr-icon>
         Inicio
+      </a>
+
+      <a clrVerticalNavLink routerLink="mascotas-listar" routerLinkActive="active">
+        <clr-icon shape="savings"></clr-icon>Mascotas
       </a>
     </clr-vertical-nav>
   </div>
