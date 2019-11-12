@@ -1,16 +1,15 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { MascotasListarComponent } from './mascotas-listar.component';
+import { MascotasListarComponent } from "./mascotas-listar.component";
 
-describe('MascotasListarComponent', () => {
+describe("MascotasListarComponent", () => {
   let component: MascotasListarComponent;
   let fixture: ComponentFixture<MascotasListarComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MascotasListarComponent ]
-    })
-    .compileComponents();
+      declarations: [MascotasListarComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('MascotasListarComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

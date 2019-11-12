@@ -1,1 +1,29 @@
-<p>mascotas-listar works!</p>
+<div class="clr-row">
+  <div class="clr-col-12">
+    <h1>Mascotas en adopción</h1>
+  </div>
+  <div class="clr-row">
+    <div class="clr-col-2">
+    </div>
+    <div class="clr-col-10">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Edad</th>
+            <th>Descripción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let mascota of mascotas">
+            <td>{{mascota.nombre}}</td>
+            <td>{{mascota.tipo}}</td>
+            <td>{{mascota.edad}}</td>
+            <td>{{mascota.descripcion}}o</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
