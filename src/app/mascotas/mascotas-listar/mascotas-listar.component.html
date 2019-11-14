@@ -1,29 +1,36 @@
 <div class="clr-row">
-  <div class="clr-col-12">
-    <h1>Mascotas en adopción</h1>
+  <div class="clr-col">
+    <h1 class="titulo1">Mascotas en adopción</h1>
   </div>
   <div class="clr-row">
-    <div class="clr-col-2">
+
+    <div class="clr-col-8">
+      <button [routerLink]="['/mascota-agregar']" routerLinkActive="router-link-active" class="btn">Ingresar
+        Mascota</button>
     </div>
-    <div class="clr-col-10">
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Nombre</th>
-            <th>Tipo</th>
-            <th>Edad</th>
-            <th>Descripción</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let mascota of mascotas">
-            <td>{{mascota.nombre}}</td>
-            <td>{{mascota.tipo}}</td>
-            <td>{{mascota.edad}}</td>
-            <td>{{mascota.descripcion}}o</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="clr-row">
+      <div class="clr-col-3">
+      </div>
+      <div class="clr-col-9">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Tipo</th>
+              <th>Edad</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let mascota of mascotas">
+              <td>{{mascota.nombre}}</td>
+              <td>{{mascota.tipo}}</td>
+              <td>{{mascota.edad}}</td>
+              <td>{{mascota.descripcion}}o</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>

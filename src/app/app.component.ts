@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ViewChild} from "@angular/core";
+import {ClrWizard} from "@clr/angular";
+
 
 @Component({
   selector: 'app-root',
