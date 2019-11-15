@@ -1,16 +1,16 @@
 <div class="clr-row">
-  <div class="clr-col-8" class="formulario">
-    <form (ngSubmit)="onSubmit()" (click)="onSubmit()" clrForm [formGroup]="mascotaForm" clrLayout="horizontal">
-      <clr-input-container>
-        <label>Nombre:</label>
-        <input clrInput type="text" name="nombre" formControlName="nombre" />
-        <clr-control-error *clrIfError="'required'">Debe indicar un Nombre</clr-control-error>
-        <clr-control-error *clrIfError="'minlength'">minimo 4 letras</clr-control-error>
-        <clr-control-error *clrIfError="'pattern'">Solo son validos numeros</clr-control-error>
-      </clr-input-container>
-      <clr-select-container>
-        <label>Especie:</label>
-        <select clrSelect name="tipo" formControlName="tipo">
+    <div class="clr-col-8" class="formulario">
+        <form (ngSubmit)="onSubmit()" (click)="onSubmit()" clrForm [formGroup]="mascotaForm" clrLayout="horizontal">
+            <clr-input-container>
+                <label>Nombre:</label>
+                <input clrInput type="text" name="nombre" formControlName="nombre" />
+                <clr-control-error *clrIfError="'required'">Debe indicar un Nombre</clr-control-error>
+                <clr-control-error *clrIfError="'minlength'">minimo 4 letras</clr-control-error>
+                <clr-control-error *clrIfError="'pattern'">Solo son validos numeros</clr-control-error>
+            </clr-input-container>
+            <clr-select-container>
+                <label>Especie:</label>
+                <select clrSelect name="tipo" formControlName="tipo">
           <clr-control-error *clrIfError="'required'">Debe colocar una especie</clr-control-error>
           <option (value)="'Perro'">Perro</option>
           <option (value)="'Gato'">Gato</option>
@@ -22,27 +22,25 @@
           <option (value)="'Insecto'">Insecto</option>
           <option (value)="'Wookiee'">Wookiee</option>
         </select>
-      </clr-select-container>
-      <clr-input-container>
-        <label>Edad:</label>
-        <input clrInput type="number" name="edad" formControlName="edad" />
-        <clr-control-error *clrIfError="'required'">Debe indicar una edad</clr-control-error>
-        <clr-control-error *clrIfError="'min'">El numero debe ser positivo</clr-control-error>
-        <clr-control-error *clrIfError="'max'">El numero debe ser menor a 100</clr-control-error>
-      </clr-input-container>
-      <clr-input-container>
-        <label>Descripción:</label>
-        <input clrInput type="text" name="descripcion" formControlName="descripcion" />
-        <clr-control-error *clrIfError="'required'">Debe colocar una leve descripcion</clr-control-error>
+            </clr-select-container>
+            <clr-input-container>
+                <label>Edad:</label>
+                <input clrInput type="number" name="edad" formControlName="edad" />
+                <clr-control-error *clrIfError="'required'">Debe indicar una edad</clr-control-error>
+                <clr-control-error *clrIfError="'min'">El numero debe ser positivo</clr-control-error>
+                <clr-control-error *clrIfError="'max'">El numero debe ser menor a 100</clr-control-error>
+            </clr-input-container>
+            <clr-input-container>
+                <label>Descripción:</label>
+                <input clrInput type="text" name="descripcion" formControlName="descripcion" />
+                <clr-control-error *clrIfError="'required'">Debe colocar una leve descripcion</clr-control-error>
 
-      </clr-input-container>
-      {{mascotaForm.status}}
-      <div>
-        <button class="btn bnt-succes" type="submit"
-          [disabled]="mascotaForm.invalid || mascotaForm.pristine || mascotaForm.untouched">
+            </clr-input-container>
+            <div>
+                <button (click)="newChange()" class="btn bnt-succes" type="submit" [disabled]="!mascotaForm.valid || mascotaForm.pristine || mascotaForm.untouched">
           Enviar
         </button>
-      </div>
-    </form>
-  </div>
+            </div>
+        </form>
+    </div>
 </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { MascotasService } from "../mascotas.service";
-import { Mascota } from "src/app/Mascota";
+import { Mascota } from "src/app/mascotas/mascota";
 import { FormBuilder } from '@angular/forms';
 
 @Component({
