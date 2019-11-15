@@ -11,6 +11,7 @@ import { MascotaAgregarComponent } from './mascotas/mascota-agregar/mascota-agre
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { MascotasService } from './mascotas/mascotas.service';
+import { MascotasEditarComponent } from './mascotas/mascotas-editar/mascotas-editar.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { MascotasService } from './mascotas/mascotas.service';
     InicioComponent,
     MascotasListarComponent,
     MascotaAgregarComponent,
+    MascotasEditarComponent,
     
   ],
   imports: [

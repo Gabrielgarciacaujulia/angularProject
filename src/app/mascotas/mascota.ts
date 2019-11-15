@@ -1,4 +1,4 @@
-import { logging } from 'protractor';
+
 
 export interface Mascota {
 

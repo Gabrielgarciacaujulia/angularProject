@@ -1,0 +1,57 @@
+<div class="clr-row">
+  <div class="clr-col">
+    <h1 class="titule">Datos de su Mascota</h1>
+  </div>
+</div>
+<div class="clr-row">
+  <div class="clr-col-8" class="formulario">
+    <form clrForm [formGroup]="mascotaForm" clrLayout="horizontal">
+      <clr-input-container>
+        <label>Nombre:</label>
+        <input clrInput type="text" name="nombre" formControlName="nombre" />
+        <clr-control-error *clrIfError="'required'">Debe indicar un Nombre</clr-control-error>
+        <clr-control-error *clrIfError="'minlength'">minimo 4 letras</clr-control-error>
+        <clr-control-error *clrIfError="'pattern'">Solo son validos numeros</clr-control-error>
+      </clr-input-container>
+      <clr-select-container>
+        <label>Especie:</label>
+        <select clrSelect name="tipo" formControlName="tipo">
+          <clr-control-error *clrIfError="'required'">Debe colocar una especie</clr-control-error>
+          <option (value)="'Perro'">Perro</option>
+          <option (value)="'Gato'">Gato</option>
+          <option (value)="'Hamster'">Hamster</option>
+          <option (value)="'Pajaro'">Pajaro</option>
+          <option (value)="'Pez'">Pez</option>
+          <option (value)="'Tortuga'">Tortuga</option>
+          <option (value)="'Reptil'">Reptil</option>
+          <option (value)="'Insecto'">Insecto</option>
+          <option (value)="'Wookiee'">Wookiee</option>
+        </select>
+      </clr-select-container>
+      <clr-input-container>
+        <label>Edad:</label>
+        <input clrInput type="number" name="edad" formControlName="edad" />
+        <clr-control-error *clrIfError="'required'">Debe indicar una edad</clr-control-error>
+        <clr-control-error *clrIfError="'min'">El numero debe ser positivo</clr-control-error>
+        <clr-control-error *clrIfError="'max'">El numero debe ser menor a 100</clr-control-error>
+      </clr-input-container>
+      <clr-input-container>
+        <label>Descripción:</label>
+        <input clrInput type="text" name="descripcion" formControlName="descripcion" />
+        <clr-control-error *clrIfError="'required'">Debe colocar una leve descripcion</clr-control-error>
+
+      </clr-input-container>
+      <div>
+        <button (click)="onSubmit()" class="btn bnt-succes"
+          [disabled]="!mascotaForm.valid || mascotaForm.pristine || mascotaForm.untouched">
+          Actualizar
+        </button>
+        <!--  <button (click)="cancel()" class="btn bnt-succes"
+                [disabled]="!mascotaForm.valid || mascotaForm.pristine || mascotaForm.untouched">Cancel</button>
+              <button (click)="reset()" class="btn bnt-succes"
+                [disabled]="!mascotaForm.valid || mascotaForm.pristine || mascotaForm.untouched">Reset</button>
+           -->
+      </div>
+    </form>
+  </div>
+</div>
