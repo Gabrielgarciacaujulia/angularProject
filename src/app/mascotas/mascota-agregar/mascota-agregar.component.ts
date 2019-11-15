@@ -1,10 +1,15 @@
 import { Component, OnInit } from "@angular/core";
-import { FormGroup, FormControl, Validators, MinLengthValidator} from "@angular/forms";
+import {
+  FormGroup,
+  FormControl,
+  Validators,
+  MinLengthValidator
+} from "@angular/forms";
 import { FormBuilder } from "@angular/forms";
 import { MascotasService } from "../mascotas.service";
-import { Mascota } from "src/app/mascotas/mascota"
-import {Router} from "@angular/router"
- 
+import { Mascota } from "src/app/mascotas/mascota";
+import { Router } from "@angular/router";
+
 @Component({
   selector: "app-mascota-agregar",
   templateUrl: "./mascota-agregar.component.html",
@@ -18,21 +23,19 @@ export class MascotaAgregarComponent implements OnInit {
     descripcion: ["", Validators.required]
   });
 
-  constructor(private fb: FormBuilder, private mascotasService: MascotasService) {}
-  
+  constructor(
+    private fb: FormBuilder,
+    private mascotasService: MascotasService,
+    private router: Router
+  ) {}
 
   onSubmit() {
-    
     console.log(this.mascotaForm);
-    this.mascotasService.addMascota(this.mascotaForm.value)
-  
+    this.mascotasService.addMascota(this.mascotaForm.value).subscribe(data => {
+      this.router.navigateByUrl("/mascotas-listar");
+    });
   }
-  ngOnInit() {
-    
-  }
-  private router:Router;
+  ngOnInit() {}
 
-  newChange(): void {
-    this.router.navigateByUrl('/mascotas-listar');
-}
+ 
 }
