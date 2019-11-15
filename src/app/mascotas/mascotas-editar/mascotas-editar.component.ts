@@ -40,4 +40,7 @@ export class MascotasEditarComponent implements OnInit {
     this.mascotaService.updateMascota(this.mascotaForm.value)
     .subscribe(info => this.router.navigate(['/mascotas-listar'])) 
    }
+   cancel() {
+    this.router.navigateByUrl("/mascotas-listar");
+  }
 }
