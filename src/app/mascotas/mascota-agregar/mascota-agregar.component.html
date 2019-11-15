@@ -1,6 +1,11 @@
 <div class="clr-row">
+  <div class="clr-col">
+    <h1 class="titule">Datos de su Mascota</h1>
+  </div>
+</div>
+<div class="clr-row">
   <div class="clr-col-8" class="formulario">
-    <form (ngSubmit)="onSubmit()" clrForm [formGroup]="mascotaForm" clrLayout="horizontal">
+    <form clrForm [formGroup]="mascotaForm" clrLayout="horizontal">
       <clr-input-container>
         <label>Nombre:</label>
         <input clrInput type="text" name="nombre" formControlName="nombre" />
@@ -37,11 +42,14 @@
 
       </clr-input-container>
       <div>
-        <button class="btn bnt-succes" type="submit"
-          [disabled]="!mascotaForm.valid || mascotaForm.pristine || mascotaForm.untouched"
-          >
+        <button (click)="onSubmit()" class="btn bnt-succes" type="submit"
+          [disabled]="!mascotaForm.valid || mascotaForm.pristine || mascotaForm.untouched">
           Enviar
         </button>
+        <button (click)="cancel()" class="btn bnt-succes"
+          [disabled]="!mascotaForm.valid || mascotaForm.pristine || mascotaForm.untouched">Cancel</button>
+        <button (click)="reset()" class="btn bnt-succes"
+          [disabled]="!mascotaForm.valid || mascotaForm.pristine || mascotaForm.untouched">Reset</button>
       </div>
     </form>
   </div>

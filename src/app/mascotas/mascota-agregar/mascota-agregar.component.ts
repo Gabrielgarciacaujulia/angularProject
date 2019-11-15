@@ -37,5 +37,10 @@ export class MascotaAgregarComponent implements OnInit {
   }
   ngOnInit() {}
 
- 
+  cancel() {
+    this.router.navigateByUrl("/mascotas-listar");
+  }
+  reset() {
+    this.mascotaForm.reset();
+  }
 }
