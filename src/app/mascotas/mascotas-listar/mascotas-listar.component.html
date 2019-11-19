@@ -1,49 +1,48 @@
 <div class="clr-row">
-  <div class="clr-col">
-    <h1 class="titulo1">Mascotas en adopción</h1>
-  </div>
-  <div class="clr-row">
-
-    <div class="clr-col-8">
-      <button [routerLink]="['/mascota-agregar']" routerLinkActive="router-link-active" class="btn">Ingresar
-        Mascota</button>
+    <div class="clr-col">
+        <h1 class="titulo1">Mascotas en adopción</h1>
     </div>
     <div class="clr-row">
-      <div class="clr-col-3">
-      </div>
-      <div class="clr-col-9">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Nombre</th>
-              <th>Tipo</th>
-              <th>Edad</th>
-              <th>Descripción</th>
-              <th>Editar</th>
-              <th>ELIMINAR MASCOTA</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let mascota of mascotas">
-              <td>{{mascota.nombre}}</td>
-              <td>{{mascota.tipo}}</td>
-              <td>{{mascota.edad}}</td>
-              <td>{{mascota.descripcion}}</td>
-              <td>
-                <button [routerLink]="['/mascota-editar', mascota.id]" routerLinkActive="router-link-active"
-                  class="btn">
+
+        <div class="clr-col-8">
+            <button [routerLink]="['/mascota-agregar']" routerLinkActive="router-link-active" class="btn">Ingresar
+        Mascota</button>
+        </div>
+        <div class="clr-row">
+            <div class="clr-col-3">
+            </div>
+            <div class="clr-col-9">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Tipo</th>
+                            <th>Edad</th>
+                            <th>Descripción</th>
+                            <th>Editar</th>
+                            <th>ELIMINAR MASCOTA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let mascota of mascotas">
+                            <td>{{mascota.nombre}}</td>
+                            <td>{{mascota.tipo}}</td>
+                            <td>{{mascota.edad}}</td>
+                            <td>{{mascota.descripcion}}</td>
+                            <td>
+                                <button [routerLink]="['/mascota-editar', mascota.id]" routerLinkActive="router-link-active" class="btn">
                   <clr-icon shape="pencil"></clr-icon>
                 </button>
-              </td>
-              <td>
-                <button (click)="delete(mascota.id)" class="btn" class="btn btn-danger">
+                            </td>
+                            <td>
+                                <button (click)="delete(mascota.id)" class="btn" class="btn btn-danger">
                   <clr-icon shape="trash"></clr-icon>
                 </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
