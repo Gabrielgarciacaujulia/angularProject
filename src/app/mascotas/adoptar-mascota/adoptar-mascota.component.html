@@ -1,71 +1,162 @@
-<clr-accordion>
-    <clr-accordion-panel>
-        <clr-accordion-title>Item 1</clr-accordion-title>
-        <clr-accordion-content *clrIfExpanded>
-            <div class="clr-row">
-                <div class="clr-col-lg-6 clr-col-12">
-                    <div class="card">
-                        <div class="card-header">
-                            Header
-                        </div>
-                        <div class="card-block">
-                            <div class="card-media-block">
-                                <img src="https://ep00.epimg.net/tecnologia/imagenes/2015/06/25/actualidad/1435248518_445335_1435251285_noticia_normal.jpg" class="card-media-image">
-                                <div class="card-media-description">
-                                    <span class="card-media-title">
-                                    
-                                </span>
-                                    <span class="card-media-text">
-                                   ...
-                                </span>
-                                </div>
-                            </div>
-                            <div class="card-text">
-                                ...
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <button class="btn btn-sm btn-link">Action</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="clr-col-lg-6 clr-col-12">
-                    <div class="card">
-                        <div class="card-header">
-                            Header
-                        </div>
-                        <div class="card-block">
-                            <div class="card-media-block wrap">
-                                <img src="..." class="card-media-image">
-                                <div class="card-media-description">
-                                    <span class="card-media-title">
-                                    Project B
-                                </span>
-                                    <span class="card-media-text">
-                                    Owner: Jane Doe
-                                </span>
-                                </div>
-                            </div>
-                            <div class="card-text">
-                                ...
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <button class="btn btn-sm btn-link">Action</button>
-                        </div>
-                    </div>
-                </div>
+<clr-accordion class="ancho">
+  <clr-accordion-panel>
+    <clr-accordion-title>
+      <div>Mascotas</div>
+    </clr-accordion-title>
+    <clr-accordion-content *clrIfExpanded>
+      <div class="clr-row">
+        <div class="clr-col-2"></div>
+        <div class="clr-col-lg-6 clr-col-6">
+          <div class="card" *ngFor="let mascota of mascotas">
+            <div class="card-header">
+              En Adopcion
             </div>
-        </clr-accordion-content>
-    </clr-accordion-panel>
+            <div class="card-block">
+              <div class="card-media-block">
+                <img
+                  src="https://ep00.epimg.net/tecnologia/imagenes/2015/06/25/actualidad/1435248518_445335_1435251285_noticia_normal.jpg"
+                  class="card-media-image" />
+                <div class="card-media-description">
+                  <span class="card-media-title"> </span>
+                  <span class="card-media-text">
+                    {{ mascota.nombre }}
+                  </span>
+                </div>
+              </div>
+              <div class="card-text">
+                {{ mascota.descripcion }}
+              </div>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-sm btn-link">Action</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </clr-accordion-content>
+  </clr-accordion-panel>
 
-    <clr-accordion-panel>
-        <clr-accordion-title>Item 2</clr-accordion-title>
-        <clr-accordion-content *clrIfExpanded>Content 2</clr-accordion-content>
-    </clr-accordion-panel>
+  <clr-accordion-panel>
+    <clr-accordion-title>Politicas De Adopcion</clr-accordion-title>
+    <clr-accordion-content *clrIfExpanded>
+      <ol class="list">
+        <h5>Requisitos para adoptar a una mascota:</h5>
+        <br />
+        <li>
+          Comprobante de domicilio
+          <ul class="list">
+            <li>
+              Documento que demuestre que la persona es propietaria del
+              domicilio donde vivirá la mascota o, en caso de alquiler, que el
+              arrendatario permite residir con animales.
+            </li>
+          </ul>
+        </li>
+        <br />
+        <li>
+          Contrato de adopción.
+          <ul class="list">
+            <li>
+              Debes firmar un acta que te compromete a: Cuidar de tu mascota y
+              mantenerla en unas condiciones óptimas de espacio, tiempo,
+              alimentación, ejercicio...
+            </li>
+            <li>
+              Dotarle de los cuidados veterinarios que necesite. La mascota se
+              entregará desparasitada y con las correspondientes vacunas, los
+              perros y los gatos llevarán, además, microchip.
+            </li>
+            <li>
+              No destinarlo a la cría o reproducción. Los animales que tengan la
+              edad suficientes se entregarán esterilizados, y si aún no han
+              alcanzado la edad necesaria se firmará un compromiso de
+              esterilización.
+            </li>
+            <li>
+              Notificar cualquier cambio a la asociación (pérdida, defunción,
+              etc).
+            </li>
+            <li>
+              Compromiso de no abandonarlo. Si por algún motivo no puedes
+              hacerte cargo de la mascota lo devolverás a la asociación.
+            </li>
+          </ul>
+        </li>
+        <br />
+        <li>Cubrir los costes</li>
+        <ul class="list">
+          <li>
+            Las asociaciones no reciben subsidio económico sino que viven de las
+            ayudas económicas personales. Se trata de una donación para cubrir
+            los gastos veterinarios de la mascota mientras ha estado bajo su
+            tutela.
+          </li>
+        </ul>
+        <br />
+        <li>Lo que debes saber para adoptar una mascota</li>
+        <ul>
+          <li>
+            La asociación tiene el derecho de no entregarte la mascota si no se
+            cumples los requisitos exigidos.
+          </li>
+          <li>
+            Puede solicitar que la presentación o adopción del animal se realice
+            en el domicilio en el que vivirá la mascota para conocer su futuro
+            entorno.
+          </li>
+          <li>
+            Durante el régimen de acogida se realizará un seguimiento para ver
+            qué tal se adapta la mascota a la familia y comprobar que se cumple
+            el compromiso adquirido.
+          </li>
+          <li>
+            Si te encuentras un animal abandonado existe un plazo de tiempo que
+            hay que esperar antes de poder adoptarlo oficialmente por si el
+            dueño lo ha perdido y lo quiere reclamar.
+          </li>
+        </ul>
+        <br />
+        <li>Otras opciones</li>
+        <ul>
+          <li>
+            Donación. Las aportaciones económicas o la donación de objetos y
+            juguetes para estos animales son otra forma de mejorar su vida en
+            los centros de acogida.
+          </li>
+          <li>
+            Apadrinamiento. Puedes convertirte en la madrina/padrino de una
+            mascota y ocuparte de su manutención hasta que un dueño le adopte.
+          </li>
+          <li>
+            Voluntariado. Otra opción es hacerte voluntario de una asociación
+            protectora de animales y participar en su proyecto solidario:
+            asistir directamente a los animales, divulgación de información y
+            desarrollo de eventos en defensa de los animales, seguimiento de
+            adopciones, etc.
+          </li>
+          <li>
+            Casas de acogida. Puedes acoger temporalmente a una mascota
+            abandonada hasta que le adopten y encuentre un nuevo hogar.
+          </li>
+        </ul>
+      </ol>
+    </clr-accordion-content>
+  </clr-accordion-panel>
 
-    <clr-accordion-panel>
-        <clr-accordion-title>Item 3</clr-accordion-title>
-        <clr-accordion-content *clrIfExpanded>Content 3</clr-accordion-content>
-    </clr-accordion-panel>
+  <clr-accordion-panel>
+    <clr-accordion-title>Nuestras redes sociales</clr-accordion-title>
+    <clr-accordion-content *clrIfExpanded><button class="btn btn-outline">
+        <a href="https://www.facebook.com/mascotasenadopcionargentina">
+          <i class="fab fa-facebook-square"></i> Facebook
+        </a>
+      </button></clr-accordion-content>
+    <clr-accordion-content *clrIfExpanded>
+      <button class="btn btn-outline">
+        <a href="https://www.instagram.com/mascotasenadopcionargentina/">
+          <i class="fab fa-instagram"></i>
+          Instagram
+        </a>
+      </button></clr-accordion-content>
+
+  </clr-accordion-panel>
 </clr-accordion>

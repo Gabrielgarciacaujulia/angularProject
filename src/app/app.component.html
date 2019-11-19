@@ -1,30 +1,35 @@
 <clr-main-container>
-    <clr-header class="colorBarra">
-        <div class="branding">
-            <a routerLink="inicio" class="nav-link">
-                <clr-icon shape="home"></clr-icon>
-                <span class="title" class="colorNegro">Refugio De Animales El Panda Felíz</span>
-            </a>
-        </div>
-    </clr-header>
-    <div class="content-container">
-        <main class="content-area">
-            <router-outlet></router-outlet>
-        </main>
-        <clr-vertical-nav [clrVerticalNavCollapsible]="true" class="nav-trigger--bottom" [clr-nav-level]="1">
-            <a clrVerticalNavLink routerLink="inicio" routerLinkActive="active">
-                <clr-icon clrVerticalNavIcon shape="house"></clr-icon>
-                Inicio
-            </a>
-            <p></p>
-            <a clrVerticalNavLink routerLink="mascotas-listar" routerLinkActive="active">
-                <clr-icon shape="savings"></clr-icon>Mascotas
-            </a>
-            <p></p>
-            <a clrVerticalNavLink routerLink="adoptar-mascota" routerLinkActive="active">
-                <clr-icon shape="heart"></clr-icon>
-                Mascotas
-            </a>
-        </clr-vertical-nav>
+  <clr-header class="colorBarra">
+    <div class="branding">
+      <a routerLink="inicio" class="nav-link">
+        <clr-icon shape="home"></clr-icon>
+        <span class="title" class="colorNegro">Refugio De Animales El Panda Felíz</span>
+      </a>
     </div>
+  </clr-header>
+  <div class="content-container">
+    <main class="content-area">
+      <router-outlet></router-outlet>
+    </main>
+    <clr-vertical-nav [clrVerticalNavCollapsible]="true" class="nav-trigger--bottom" [clr-nav-level]="1">
+      <a clrVerticalNavLink routerLink="inicio" routerLinkActive="active">
+        <clr-icon clrVerticalNavIcon shape="house"></clr-icon>
+        Inicio
+      </a>
+      <p></p>
+      <a clrVerticalNavLink routerLink="mascotas-listar" routerLinkActive="active">
+        <clr-icon shape="savings"></clr-icon>Mascotas
+      </a>
+      <p></p>
+      <a clrVerticalNavLink routerLink="adoptar-mascota" routerLinkActive="active">
+        <clr-icon shape="heart"></clr-icon>
+        Adoptar mascotas
+      </a>
+      <p></p>
+      <a clrVerticalNavLink routerLink="consejos-adopcion" routerLinkActive="active">
+        <i class="fas fa-info"></i>
+        Consejos de adopción
+      </a>
+    </clr-vertical-nav>
+  </div>
 </clr-main-container>
