@@ -23,7 +23,7 @@
     "@clr/icons": "2.3.1",
     "@clr/ui": "^2.3.2",
     "@webcomponents/custom-elements": "^1.0.0",
-    "angular": "^1.7.9",
+    "angular": "^1.8.0",
     "angular-font-awesome": "^3.1.2",
     "font-awesome": "^4.7.0",
     "rxjs": "~6.4.0",
